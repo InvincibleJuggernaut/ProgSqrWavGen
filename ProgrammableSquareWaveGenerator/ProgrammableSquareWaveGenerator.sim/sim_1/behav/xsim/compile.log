@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Documents/Xilinx Vivado/Labs/ProgrammableSquareWaveGenerator/ProgrammableSquareWaveGenerator.srcs/sources_1/new/prog_sqr_wav.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prog_sqr_wav
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'prog_clk' is not allowed [C:/Users/Lenovo/Documents/Xilinx Vivado/Labs/ProgrammableSquareWaveGenerator/ProgrammableSquareWaveGenerator.srcs/sources_1/new/prog_sqr_wav.v:33]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Lenovo/Documents/Xilinx Vivado/Labs/ProgrammableSquareWaveGenerator/ProgrammableSquareWaveGenerator.srcs/sim_1/new/prog_sqr_wav_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prog_sqr_wav_tb

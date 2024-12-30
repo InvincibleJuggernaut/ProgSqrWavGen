@@ -1,0 +1,189 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBB49FA3234AD1C0F",
+      "device": "xc7z020clg484-1",
+      "gen_directory": "../../../../ProgSqrWav_VIO_ILA.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "vio_0": "",
+      "prog_sqr_wav_0": "",
+      "ila_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "ip_revision": "25",
+        "xci_name": "design_1_vio_0_0",
+        "xci_path": "ip\\design_1_vio_0_0\\design_1_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "4"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE_OUT1_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "prog_sqr_wav_0": {
+        "vlnv": "xilinx.com:module_ref:prog_sqr_wav:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_prog_sqr_wav_0_0",
+        "xci_path": "ip\\design_1_prog_sqr_wav_0_0\\design_1_prog_sqr_wav_0_0.xci",
+        "inst_hier_path": "prog_sqr_wav_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "prog_sqr_wav",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "m": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "n": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "prog_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "ref_clk": {
+            "type": "clk",
+            "direction": "O"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "15",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip\\design_1_ila_0_0\\design_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "65536"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "6"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "prog_sqr_wav_0/clk",
+          "vio_0/clk",
+          "ila_0/clk"
+        ]
+      },
+      "prog_sqr_wav_0_prog_clk": {
+        "ports": [
+          "prog_sqr_wav_0/prog_clk",
+          "vio_0/probe_in0",
+          "ila_0/probe4"
+        ]
+      },
+      "prog_sqr_wav_0_ref_clk": {
+        "ports": [
+          "prog_sqr_wav_0/ref_clk",
+          "vio_0/probe_in1",
+          "ila_0/probe5"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "prog_sqr_wav_0/m",
+          "ila_0/probe0"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "prog_sqr_wav_0/n",
+          "ila_0/probe1"
+        ]
+      },
+      "vio_0_probe_out2": {
+        "ports": [
+          "vio_0/probe_out2",
+          "prog_sqr_wav_0/enable",
+          "ila_0/probe2"
+        ]
+      },
+      "vio_0_probe_out3": {
+        "ports": [
+          "vio_0/probe_out3",
+          "prog_sqr_wav_0/rst",
+          "ila_0/probe3"
+        ]
+      }
+    }
+  }
+}
